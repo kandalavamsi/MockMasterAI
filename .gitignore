@@ -1,0 +1,14 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+*.env
+
+# Node
+node_modules/
+frontend/build/
+frontend/dist/
+.react-router/
