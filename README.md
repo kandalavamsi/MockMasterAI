@@ -747,7 +747,3 @@ npm run dev
 ```
 
 ---
-
-If you want, I can also generate:
-1. a more polished GitHub-ready README with badges and screenshots sections, or
-2. a shorter production-level README optimized for public GitHub visibility.
