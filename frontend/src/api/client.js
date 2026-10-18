@@ -1,8 +1,10 @@
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/$/, "");
+
 async function request(path, options) {
   let response;
 
   try {
-    response = await fetch(path, options);
+    response = await fetch(`${API_BASE_URL}${path}`, options);
   } catch {
     throw new Error("Could not reach the backend. Check that it is running on port 8000.");
   }

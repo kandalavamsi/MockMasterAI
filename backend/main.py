@@ -9,7 +9,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from crew_logic import generate_paper, generate_mock_test, GenerationError
 from exam_config import EXAM_CONFIG, DIFFICULTIES
+import os
 
+allowed_origins = [
+    origin.strip()
+    for origin in os.getenv("FRONTEND_ORIGINS", "http://localhost:5173").split(",")
+    if origin.strip()
+]
 app = FastAPI(
     title="MockMaster AI",
     description="Intelligent Question Paper and Computer-Based Mock Test Generation API",
@@ -18,7 +24,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
