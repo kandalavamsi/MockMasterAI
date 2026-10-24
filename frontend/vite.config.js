@@ -5,10 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/health": "http://127.0.0.1:8000",
-      "/api": "http://127.0.0.1:8000",
-      "/generate": "http://127.0.0.1:8000",
-      "/mock-test": "http://127.0.0.1:8000",
+      "/health": "https://mockmasterai-1p9l.onrender.com",
+      "/api": "https://mockmasterai-1p9l.onrender.com",
+      "/generate": "https://mockmasterai-1p9l.onrender.com",
+      "/mock-test": "https://mockmasterai-1p9l.onrender.com",
     },
   },
 });
