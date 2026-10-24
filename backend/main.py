@@ -13,7 +13,7 @@ import os
 
 allowed_origins = [
     origin.strip()
-    for origin in os.getenv("FRONTEND_ORIGINS", "https://f702a2c9.mockmasterai.pages.dev").split(",")
+    for origin in os.getenv("FRONTEND_ORIGINS", "https://mockmasterai.pages.dev").split(",")
     if origin.strip()
 ]
 app = FastAPI(
